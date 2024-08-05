@@ -1,0 +1,201 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+button {
+    color: white;
+    background-color: rgb(189, 6, 6);
+    border: none;
+    width: 200px;
+    height: 50px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 3px;
+    margin: 30px;
+    }
+
+.The-Super-Mario-Bross {
+    height: 150px;
+}
+
+.Mario {
+    height: 350px;
+}
+
+body {
+    height: 100vh;
+}
+
+.caixa-primaria {
+    width: 50%;
+}
+
+.caixa-de-video {
+    position: fixed;
+    z-index: -1;
+    top: 0;
+}
+
+video {
+   min-height: 100%; /*altura minima*/
+   min-width: 100%; /*largura minima*/
+   position: fixed;
+   top: 0;
+   
+}
+
+.caixa-mae {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 100px;
+    height: 100vh;
+}
+
+.mascara {
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(109deg, rgba(10, 12, 16, 0.99) 15%, rgba(10, 12, 16, 0.7) 50%, rgba(10, 12, 16, 0.99) 85%); 
+    position: fixed;
+    top: 0;
+}
+
+.link-whatsapp img {
+    height: 50px;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+}
+
+p {
+    color: white;
+    margin: 20px;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin: 30px;
+}
+
+.header img {
+    height: 50px;
+}
+
+.header a {
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.header a:hover {
+    color: rgb(189, 6, 6);
+    font-size: 26px;
+    transition: 0.5s ease-in-out;
+    
+}
+
+.Formulario-fale-Conosco {
+    background-color: white;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    position: fixed;
+    top: 30%;
+    left: -300px;
+    padding: 20px;
+    border-radius: 5px;  
+    transition: left 1s ease-in-out;
+    
+}
+
+input {
+    border-radius: 5px;
+    height: 40px;
+    border: 1px solid gray;
+    padding-left: 5px;
+    outline-color: green;
+}
+
+textarea {
+    border-radius: 5px;      
+    width: 270px;
+    height: 100px;
+    border: 1px solid gray;
+    padding-left: 5px;
+    outline-color: green;
+}
+
+.mascara-formulario {
+    visibility: hidden;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(109deg, rgba(10, 12, 16, 0.99) 15%, rgba(10, 12, 16, 0.7) 50%, rgba(10, 12, 16, 0.99) 85%); 
+    transition: visibility 1s ease-in-out;
+}
+
+/* max - valor --> menor  que Npx , aplica o CSS do Media*/
+/* min - valor --> maior  que Npx , aplica o CSS do Media*/
+
+    @media(max-width: 1000px){
+
+        p {
+            display: none;
+        }
+
+        .caixa-mae {
+            flex-direction: column;
+            justify-content: flex-start;
+            padding: 0.1;
+        }
+
+        .caixa-primaria {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .Mario {
+            height: auto;
+            width: 80vw;
+            
+        }
+
+        .header {
+            margin: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .header img {
+            display: none;
+        }
+
+        .header a {
+            font-size: 17px;
+        }
+
+        .link-whatsapp img {
+            height: 35px;
+        }
+    }
+   
+      
+
+
+/* inicial
+    top:30%;
+    left: -300px;
+
+/* final 
+    top:30%;
+    left: 50%;
+    transform: translateX(-50%);
